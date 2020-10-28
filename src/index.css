@@ -1,13 +1,257 @@
+:root {
+  --main-color:#11122a;
+  --primary-color: rgba(139,13,139,0.65);
+  --overlay-color: rgba(24,39,51,0.85);
+  --primary-text-color: #ffffff;
+  --menu-speed: 0.75s;
+  --off-white:#ccd6f6;
+  --img-color:#cbe635;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  background-color: var(--main-color);
+  color: var(--primary-text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
+.nav-brand {
+  margin-top: 15px;
+  font-family: "Dancing Script";
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins','Roboto', sans-serif;
+}
+
+#navigation{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100px;
+  background-color: var(--main-color);
+  z-index: 5;
+  box-shadow: 0px 0px 10px 2px black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container{
+  margin-top: 100px;
+}
+
+/* Header style starts*/
+.portfolio-section{
+  padding: 25px 20px 25px 20px;
+}
+.header-text{
+  padding-right: 10px;
+}
+
+
+.header-text span{
+  color: var(--off-white);
+}
+
+.header-text span, .header-text h1 {
+ font-size: 2.5em;
+ font-weight: bolder;
+ line-height: 70px;
+
+}
+
+.header-text p{
+  line-height: 30px;
+  color: var(--off-white);
+  
+}
+
+.off-white {
+  color: var(--off-white);
+}
+
+@media (max-width: 480px){
+  .header-text span, .header-text h1 {
+    font-size: 2em;
+    font-weight: bolder;
+    line-height: 50px;
+
+  }
+}
+
+.header-image img{
+  width: 95%;
+  display: block;
+  filter: grayscale(1000%) contrast(1) brightness(90%);
+  transition: filter 2s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.image-container:hover{
+  border-bottom: solid 1px #ffc226;
+  border-right: solid 2px #ffc226;
+  box-shadow: 0px 0px 30px 0px  #ffc226;;
+}
+
+.header-image img:hover{
+  filter: grayscale(0%);
+}
+
+.about-me h2{
+ font-size: 2.5em;
+ line-height: 70px;
+ 
+  
+}
+
+.about-me p{
+  font-weight: 100;
+  
+}
+
+
+.skill-set h3{
+  padding-top: 30px;
+  font-weight: bolder;
+  
+
+}
+
+.about-rule{
+  background-color: #ffc226;
+  height: 2px;
+  width: 350px;
+  position: absolute;
+  top: 35px;
+  left: 40%;
+}
+
+@media (max-width: 480px){
+  .about-rule{
+    width: 80px;
+    position: absolute;
+    top: 35px;
+    left: 75%;
+  }
+
+  .about-me h2{
+    font-size: 2em;
+    line-height: 70px;
+  
+  }
+}
+
+
+.project-section-heading h2{
+
+  font-size: 2.5em;
+  line-height: 70px; 
+ }
+
+ @media(max-width:480px){
+
+  .project-section-heading h2{
+    font-size: 2em;
+    line-height: 70px; 
+   }
+
+  
+ }
+
+.featured-project h4{
+  color: #cbe635; 
+}
+
+.project-title{
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.project-detail{
+  color: var(--off-white);
+}
+
+.project-link{
+  list-style: none;
+}
+
+.project-link li{
+  padding: 5px;
+  margin: 5px;
+  display: inline;
+}
+ 
+.project-link a{
+  text-decoration: none;
+  color:white;
+}
+
+.project-technologies{
+  list-style: none;
+}
+
+/*Contact section*/
+.contact-section-form h3{
+font-weight: bolder;
+font-size: 2.5em;
+}
+
+.contact-form *{
+  background-color: inherit;
+}
+
+.contact-form form input[type="text"] , .contact-form form input[type="email"], .contact-form form textarea{
+  color: white !important;
+  border-radius: 0px;
+  border:0px;
+  border-bottom: solid 1px white;
+  height: 30px;
+  width: 80%;
+}
+
+@media (max-width:490px){
+
+  .contact-form form input[type="text"] , .contact-form form input[type="email"], .contact-form form textarea{
+    width: 90%;
+  }
+
+  .contact-section-form h3{
+    font-size: 1.8em;
+  }
+
+}
+
+.contact-form form input[type="text"]:focus, .contact-form form input[type="email"]:focus, .contact-form form textarea:focus {
+  border-bottom: solid 1px white;
+  background-color: var(--off-white);
+  color:black !important;
+  border-radius: 0px;
+  border:0px;
+  border-bottom: solid 1px white;
+}
+
+.contact-social h3{
+  font-size: 2em;
+}
+
+
+.contact-form form textarea{
+  height: 100px;
+}
+.contact-social ul li{
+  display: inline;
+  margin: 10px;
+}
+
+.contact-social ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer{
+  background-color: #171724;
 }
